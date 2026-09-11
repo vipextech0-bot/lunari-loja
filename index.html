@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunari — Moda Feminina</title>
+<meta name="description" content="Lunari, moda feminina. Peças para brilhar em qualquer fase: escolha, monte a sacola e finalize pelo WhatsApp.">
+<meta name="theme-color" content="#1f1b16">
+<link rel="icon" type="image/png" href="./assets/monogram.png">
+<link rel="apple-touch-icon" href="./assets/monogram.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff;color:#1f1b16;font-family:'Raleway',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:#1f1b16;text-decoration:none}a:hover{color:#B08A4D}
+button{font-family:inherit;cursor:pointer}
+*{box-sizing:border-box}
+img{max-width:100%}
+@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes menuIn{from{transform:translateX(-100%)}to{transform:none}}
+@keyframes menuItem{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
+main > section{animation:pageIn .35s ease both}
+a,button{transition:color .2s ease,background-color .2s ease,border-color .2s ease,opacity .2s ease}
+.wrap{max-width:1240px;margin:0 auto;padding-left:24px;padding-right:24px}
+.announce{background:#1f1b16;color:#E6C79C;text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px}
+.hdr-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:18px}
+.wordmark{height:26px;display:block}
+.nav{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding-top:14px;padding-bottom:16px}
+.nav-wrap{position:relative}
+.nav a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding-bottom:4px;color:#1f1b16;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px 20px}
+.card{cursor:pointer;animation:cardIn .4s ease both;min-width:0}
+.card .ph{aspect-ratio:3/4;position:relative;overflow:hidden;background:#F1ECE3;transition:transform .3s ease,box-shadow .3s ease}
+.card:hover .ph{transform:translateY(-3px);box-shadow:0 12px 28px rgba(31,27,22,.08)}
+.card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.card .nm{padding-top:12px;font-size:14px;font-weight:400;line-height:1.3}
+.card .pr{font-size:14px;color:#7d6535;margin-top:4px}
+.card .rf{font-size:11px;letter-spacing:.08em;color:#8a8279;margin-top:3px}
+.banner{position:relative;display:block;overflow:hidden;aspect-ratio:5/2;background:#F1ECE3;cursor:pointer;margin-top:16px}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .6s ease}
+.banner:hover img{transform:scale(1.02)}
+.banner .cta{position:absolute;left:20px;bottom:20px;background:rgba(31,27,22,.9);color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;line-height:1}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sec-h h2,.h2{font-family:'Raleway',sans-serif;font-weight:400;font-size:clamp(24px,4vw,32px);margin:0}
+.link-u{font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid #B08A4D;padding-bottom:3px;white-space:nowrap}
+.cat-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px}
+.filters{display:flex;flex-direction:column;gap:28px}
+.f-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.prod-layout{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px}
+.btn-dark{background:#1f1b16;color:#fff;border:0;height:54px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;width:100%}
+.btn-dark:hover{background:#B08A4D}
+.ftr-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-top:48px;padding-bottom:48px}
+@media (max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .announce{font-size:10px;letter-spacing:.1em;padding:8px 12px}
+  .hdr-in{padding-top:12px}
+  .wordmark{height:22px}
+  .nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;gap:20px;padding-top:12px;padding-bottom:12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav-wrap::after{content:"";position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.96));pointer-events:none}
+  .grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+  .banner{aspect-ratio:4/3;margin-top:12px}
+  .banner .cta{left:12px;bottom:12px;padding:11px 14px;font-size:11px}
+  .card .nm{font-size:13px;padding-top:10px}
+  .card .pr{font-size:13px;margin-top:2px}
+  .card .rf{font-size:10px}
+  .cat-layout{grid-template-columns:1fr;gap:20px}
+  .filters{flex-direction:row;flex-wrap:wrap;align-items:flex-end;gap:16px 20px}
+  .f-cats{display:none}
+  .f-price{flex:1 1 160px}
+  .prod-layout{gap:24px}
+  .ftr-in{flex-direction:column;align-items:flex-start;gap:14px;padding-top:32px;padding-bottom:32px}
+}
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+<sc-if value="{{ showAnnouncement }}" hint-placeholder-val="{{ true }}">
+<div class="announce">Atendimento e pedidos pelo WhatsApp</div>
+</sc-if>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #EFE9DF">
+  <div class="wrap hdr-in">
+    <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none;border:0;padding:6px;justify-self:start;display:flex;flex-direction:column;gap:5px">
+      <span style="display:block;width:22px;height:1px;background:#1f1b16"></span>
+      <span style="display:block;width:22px;height:1px;background:#1f1b16"></span>
+    </button>
+    <a href="#" onClick="{{ goHome }}" style="display:block"><img class="wordmark" src="assets/wordmark.png" alt="Lunari"></a>
+    <button onClick="{{ openCart }}" aria-label="Sacola" style="justify-self:end;background:none;border:0;padding:6px;display:flex;align-items:center;gap:8px;color:#1f1b16">
+      <svg width="20" height="22" viewBox="0 0 20 22" fill="none" stroke="#1f1b16" stroke-width="1.2"><path d="M3 7h14l-1 13H4L3 7z"></path><path d="M6.5 7V5.5a3.5 3.5 0 0 1 7 0V7"></path></svg>
+      <span style="min-width:18px;height:18px;border-radius:50%;background:#B08A4D;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:500">{{ cartCount }}</span>
+    </button>
+  </div>
+  <div class="nav-wrap">
+    <nav class="wrap nav">
+      <sc-for list="{{ navStrip }}" as="c" hint-placeholder-count="9">
+        <a href="#" onClick="{{ c.go }}" style="border-bottom:1px solid {{ c.line }}">{{ c.name }}</a>
+      </sc-for>
+    </nav>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:40">
+    <div onClick="{{ toggleMenu }}" style="position:absolute;inset:0;background:rgba(31,27,22,.45);backdrop-filter:blur(3px);animation:fadeIn .3s ease"></div>
+    <div style="position:absolute;left:0;top:0;bottom:0;width:min(400px,88vw);background:#fff;display:flex;flex-direction:column;animation:menuIn .45s cubic-bezier(.2,.7,.2,1);box-shadow:20px 0 60px rgba(31,27,22,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:24px 28px 0">
+        <img src="assets/monogram.png" alt="" style="height:56px;width:auto;animation:menuItem .5s .1s ease both">
+        <button onClick="{{ toggleMenu }}" aria-label="Fechar" style="background:none;border:1px solid #EFE9DF;width:40px;height:40px;border-radius:50%;font-size:20px;line-height:1;color:#1f1b16;animation:menuItem .5s .15s ease both">×</button>
+      </div>
+      <div style="padding:36px 28px 0;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7d6535;animation:menuItem .5s .2s ease both">Coleção</div>
+      <nav style="flex:1;overflow:auto;padding:12px 28px 0;display:flex;flex-direction:column">
+        <sc-for list="{{ navCats }}" as="c" hint-placeholder-count="8">
+          <a href="#" onClick="{{ c.goClose }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #F3EEE6;color:#1f1b16;animation:menuItem .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ c.delay }}">
+            <span style="display:flex;align-items:baseline;gap:14px"><span style="font-size:11px;color:#B08A4D;letter-spacing:.1em;min-width:20px">{{ c.num }}</span><span style="font-family:'Raleway',sans-serif;font-weight:300;font-size:26px">{{ c.name }}</span></span>
+            <span style="font-size:11px;letter-spacing:.1em;color:#8a8279">{{ c.count }}</span>
+          </a>
+        </sc-for>
+        <a href="#" onClick="{{ goAllClose }}" style="display:flex;align-items:center;gap:10px;padding:22px 0 8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1f1b16;animation:menuItem .55s .55s ease both">Ver todas as peças <span style="color:#B08A4D">→</span></a>
+      </nav>
+      <div style="padding:20px 28px 28px;border-top:1px solid #EFE9DF;display:flex;justify-content:space-between;align-items:center;gap:12px;animation:menuItem .5s .6s ease both">
+        <a href="{{ waLink }}" target="_blank" style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#1f1b16;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#B08A4D;display:inline-block"></span>WhatsApp</a>
+        <img src="assets/wordmark-light.png" alt="Lunari" style="height:14px">
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<main style="flex:1">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <section class="wrap" style="padding-top:4px">
+    <div class="banner" onClick="{{ goAll }}">
+      <img src="{{ bannerImg }}" alt="Lunari">
+      <span class="cta">Ver todas as peças →</span>
+    </div>
+    <sc-for list="{{ homeSections }}" as="sec" hint-placeholder-count="8">
+      <div style="padding-top:40px">
+        <div class="sec-h">
+          <h2>{{ sec.name }}</h2>
+          <a href="#" class="link-u" onClick="{{ sec.go }}">Ver todos ({{ sec.count }})</a>
+        </div>
+        <div class="grid">
+          <sc-for list="{{ sec.items }}" as="p" hint-placeholder-count="8">
+            <div class="card" onClick="{{ p.open }}" style="animation-delay:{{ p.delay }}">
+              <div class="ph"><img src="{{ p.thumb }}" alt="{{ p.name }}" loading="lazy"></div>
+              <div class="nm">{{ p.name }}</div>
+              <div class="pr">{{ p.priceFmt }}</div>
+              <div class="rf">Ref. {{ p.ref }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+  <section class="wrap" style="padding-top:80px;text-align:center">
+    <img src="assets/monogram.png" alt="" style="height:72px;width:auto;margin:0 auto 20px;display:block">
+    <p style="font-family:'Raleway',sans-serif;font-weight:300;font-size:clamp(20px,3vw,30px);line-height:1.35;max-width:600px;margin:0 auto;color:#1f1b16;text-wrap:pretty">Escolha suas peças, monte a sacola e finalize com a gente pelo WhatsApp.</p>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isCat }}" hint-placeholder-val="{{ false }}">
+  <section key="{{ catKey }}" class="wrap" style="padding-top:28px">
+    <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d6535;margin-bottom:8px"><a href="#" onClick="{{ goHome }}">Início</a> &nbsp;/&nbsp; {{ catTitle }}</div>
+    <h1 style="font-family:'Raleway',sans-serif;font-weight:300;font-size:clamp(30px,6vw,44px);margin:0 0 24px">{{ catTitle }}</h1>
+    <div class="cat-layout">
+      <aside class="filters">
+        <div class="f-cats">
+          <div class="f-label">Categoria</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ filterCats }}" as="c" hint-placeholder-count="9">
+              <a href="#" onClick="{{ c.go }}" style="font-size:14px;color:{{ c.color }};font-weight:{{ c.weight }}">{{ c.name }}</a>
+            </sc-for>
+          </div>
+        </div>
+        <div class="f-sizes">
+          <div class="f-label">Tamanho</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ sizeFilters }}" as="s" hint-placeholder-count="4">
+              <button onClick="{{ s.toggle }}" style="min-width:40px;height:40px;padding:0 10px;border:1px solid {{ s.border }};background:{{ s.bg }};color:{{ s.color }};font-size:12px">{{ s.name }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div class="f-price">
+          <div class="f-label">Preço até <span style="color:#7d6535">{{ maxPriceFmt }}</span></div>
+          <input type="range" min="50" max="350" step="10" value="{{ maxPrice }}" onChange="{{ setMaxPrice }}" style="width:100%;accent-color:#B08A4D;margin:0;display:block">
+        </div>
+        <button onClick="{{ clearFilters }}" style="align-self:flex-start;background:none;border:0;padding:0 0 2px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid #1f1b16;color:#1f1b16">Limpar filtros</button>
+      </aside>
+      <div style="min-width:0">
+        <div style="font-size:12px;color:#8a8279;margin-bottom:16px">{{ resultCount }}</div>
+        <div key="{{ filterKey }}" class="grid">
+          <sc-for list="{{ filtered }}" as="p" hint-placeholder-count="6">
+            <div class="card" onClick="{{ p.open }}" style="animation-delay:{{ p.delay }}">
+              <div class="ph"><img src="{{ p.thumb }}" alt="{{ p.name }}" loading="lazy"></div>
+              <div class="nm">{{ p.name }}</div>
+              <div class="pr">{{ p.priceFmt }}</div>
+              <div class="rf">Ref. {{ p.ref }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+          <p style="font-family:'Raleway',sans-serif;font-weight:300;font-size:22px;color:#8a8279;margin:32px 0">Nenhuma peça com esses filtros.</p>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isProduct }}" hint-placeholder-val="{{ false }}">
+  <section key="{{ prodKey }}" class="wrap" style="padding-top:28px">
+    <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d6535;margin-bottom:20px;line-height:1.7"><a href="#" onClick="{{ goHome }}">Início</a> &nbsp;/&nbsp; <a href="#" onClick="{{ goProductCat }}">{{ prod.cat }}</a> &nbsp;/&nbsp; {{ prod.name }}</div>
+    <div class="prod-layout">
+      <div style="min-width:0">
+        <div style="aspect-ratio:3/4;background:{{ activeTint }};position:relative;min-width:0;overflow:hidden;animation:fadeIn .35s ease both">
+          <img src="{{ activeImg }}" alt="{{ prod.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:480px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d6535;margin-bottom:10px">{{ prod.cat }}</div>
+          <h1 style="font-family:'Raleway',sans-serif;font-weight:400;font-size:clamp(26px,6vw,40px);line-height:1.1;margin:0 0 12px">{{ prod.name }}</h1>
+          <div style="font-size:22px;font-weight:400">{{ prod.priceFmt }}</div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8279;margin-top:10px">Ref. {{ prod.ref }}</div>
+        </div>
+        <sc-if value="{{ hasColors }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <div class="f-label">Cor <span style="color:#7d6535;margin-left:8px;text-transform:none;letter-spacing:0;font-size:13px">{{ selColor }}</span></div>
+          <div style="display:flex;gap:12px">
+            <sc-for list="{{ colorOpts }}" as="c" hint-placeholder-count="2">
+              <button onClick="{{ c.select }}" title="{{ c.name }}" aria-label="{{ c.name }}" style="width:30px;height:30px;border-radius:50%;background:{{ c.hex }};border:1px solid rgba(0,0,0,.12);outline:1px solid {{ c.outline }};outline-offset:3px;padding:0"></button>
+            </sc-for>
+          </div>
+        </div>
+        </sc-if>
+        <div>
+          <div class="f-label">Tamanho</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ sizeOpts }}" as="s" hint-placeholder-count="3">
+              <button onClick="{{ s.select }}" style="min-width:48px;height:44px;padding:0 14px;border:1px solid {{ s.border }};background:{{ s.bg }};color:{{ s.color }};font-size:13px">{{ s.name }}</button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ sizeError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:12px;color:#A3463C;margin-top:10px">Escolha um tamanho para continuar.</div>
+          </sc-if>
+          <sc-if value="{{ hasFit }}" hint-placeholder-val="{{ true }}">
+            <div style="font-size:12px;color:#8a8279;margin-top:10px">{{ prod.fit }}</div>
+          </sc-if>
+        </div>
+        <button class="btn-dark" onClick="{{ addCurrent }}">{{ addLabel }}</button>
+        <p style="font-size:14px;line-height:1.7;color:#4d463d;margin:0;text-wrap:pretty">{{ prod.desc }}</p>
+        <div style="border-top:1px solid #EFE9DF;padding-top:20px;font-size:13px;color:#8a8279;line-height:1.7">Dúvidas sobre medidas ou disponibilidade? Fale com a gente pelo WhatsApp antes de finalizar.</div>
+      </div>
+    </div>
+    <div style="padding:64px 0 0">
+      <h2 class="h2" style="margin:0 0 22px">Você também pode gostar</h2>
+      <div class="grid">
+        <sc-for list="{{ related }}" as="p" hint-placeholder-count="4">
+          <div class="card" onClick="{{ p.open }}" style="animation-delay:{{ p.delay }}">
+              <div class="ph"><img src="{{ p.thumb }}" alt="{{ p.name }}" loading="lazy"></div>
+              <div class="nm">{{ p.name }}</div>
+              <div class="pr">{{ p.priceFmt }}</div>
+              <div class="rf">Ref. {{ p.ref }}</div>
+            </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+</main>
+
+<footer style="margin-top:80px;border-top:1px solid #EFE9DF">
+  <div class="wrap ftr-in">
+    <img src="assets/wordmark-light.png" alt="Lunari" style="height:20px">
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:12px;letter-spacing:.14em;text-transform:uppercase">
+      <a href="{{ waLink }}" target="_blank">WhatsApp</a>
+      <a href="#">Instagram</a>
+      <a href="#">Trocas</a>
+    </div>
+    <div style="font-size:12px;color:#8a8279">© 2026 Lunari</div>
+  </div>
+</footer>
+
+</div>
+
+<sc-if value="{{ cartOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:50;display:flex;justify-content:flex-end">
+    <div onClick="{{ closeCart }}" style="flex:1;background:rgba(31,27,22,.4);animation:fadeIn .25s ease"></div>
+    <div style="width:min(440px,92vw);background:#fff;display:flex;flex-direction:column;animation:slideIn .3s ease">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #EFE9DF">
+        <div style="font-family:'Raleway',sans-serif;font-weight:300;font-size:clamp(22px,6vw,28px)">Sua sacola <span style="font-family:'Raleway',sans-serif;font-size:12px;color:#7d6535;margin-left:8px">{{ cartCountLabel }}</span></div>
+        <button onClick="{{ closeCart }}" aria-label="Fechar" style="background:none;border:0;font-size:24px;line-height:1;color:#1f1b16;padding:4px 8px">×</button>
+      </div>
+      <div style="flex:1;overflow:auto;padding:8px 24px">
+        <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ true }}">
+          <div style="text-align:center;padding:64px 0;display:flex;flex-direction:column;gap:18px;align-items:center">
+            <img src="assets/monogram-light.png" alt="" style="height:64px;width:auto">
+            <p style="font-family:'Raleway',sans-serif;font-size:20px;color:#8a8279;margin:0">Sua sacola ainda está vazia.</p>
+            <button onClick="{{ closeCartGoAll }}" style="background:none;border:0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid #1f1b16;padding:0 0 3px;color:#1f1b16">Ver peças</button>
+          </div>
+        </sc-if>
+        <sc-for list="{{ cartItems }}" as="it" hint-placeholder-count="0">
+          <div style="display:grid;grid-template-columns:76px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid #EFE9DF">
+            <div style="aspect-ratio:3/4;background:{{ it.tint }};position:relative;overflow:hidden"><img src="{{ it.thumb }}" alt="{{ it.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+              <div style="display:flex;justify-content:space-between;gap:12px"><div style="font-size:14px;font-weight:400">{{ it.name }}</div><button onClick="{{ it.remove }}" style="background:none;border:0;padding:0;font-size:12px;color:#8a8279;text-decoration:underline;white-space:nowrap">remover</button></div>
+              <div style="font-size:12px;color:#7d6535">{{ it.variant }}</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                <div style="display:inline-flex;border:1px solid #DCD3C4;align-items:center">
+                  <button onClick="{{ it.dec }}" style="width:34px;height:34px;background:none;border:0;font-size:16px">−</button>
+                  <span style="min-width:24px;text-align:center;font-size:13px">{{ it.qty }}</span>
+                  <button onClick="{{ it.inc }}" style="width:34px;height:34px;background:none;border:0;font-size:16px">+</button>
+                </div>
+                <div style="font-size:14px">{{ it.lineFmt }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ cartHasItems }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:16px 24px 24px;border-top:1px solid #EFE9DF;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;justify-content:space-between;font-size:15px"><span>Total</span><span style="font-weight:400">{{ totalFmt }}</span></div>
+          <a href="{{ checkoutLink }}" target="_blank" class="btn-dark" style="display:flex;align-items:center;justify-content:center;gap:10px;color:#fff">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.2-.2-.2-.4-.3z"></path></svg>
+            Finalizar pelo WhatsApp
+          </a>
+          <div style="font-size:12px;color:#8a8279;text-align:center;line-height:1.6">Você será direcionada ao WhatsApp com o resumo do pedido para combinar pagamento e entrega.</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1f1b16;color:#fff;padding:12px 18px;font-size:13px;z-index:60;animation:toastIn .3s ease both;display:flex;gap:14px;align-items:center;max-width:calc(100vw - 32px);width:max-content">
+    <span>{{ toast }}</span>
+    <button onClick="{{ openCart }}" style="background:none;border:0;color:#E6C79C;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:0;white-space:nowrap">Ver sacola</button>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5562994766107&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Loja&quot;},&quot;showAnnouncement&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Loja&quot;},&quot;cardShape&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Retrato&quot;,&quot;Quadrado&quot;],&quot;default&quot;:&quot;Retrato&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Vitrine&quot;}}">
+class Component extends DCLogic {
+  state = { view: 'home', cat: 'Todas', prodId: null, color: null, size: null, sizeError: false,
+    sizes: [], maxPrice: 350, cart: [], cartOpen: false, menuOpen: false, toast: '' };
+
+  CATS = ['Vestidos','Conjuntos','Blusas','Camisas','T-shirts','Calças','Shorts','Macacões'];
+  TINTS = ['linear-gradient(160deg,#F4EBDD,#E9D5B4)','linear-gradient(160deg,#EFEAE2,#DCD3C4)','linear-gradient(160deg,#F6F1EA,#E6C79C)','linear-gradient(160deg,#ECE6DB,#CFC2AB)','linear-gradient(160deg,#F3EEE6,#E0D0B8)','linear-gradient(160deg,#EFE4D0,#D9BE95)'];
+  COLORS = { Preto:'#1f1b16', Branco:'#F5F2EC', 'Off-white':'#F3EEE6', Bege:'#D9C6A8', Caramelo:'#B8743F', Marrom:'#6B4A3A', 'Bordô':'#7A2E3B', Marinho:'#2F3A5A', Azul:'#4A5A73', 'Verde-oliva':'#6B6B3F', Dourado:'#B08A4D' };
+
+  HOME_PER_CAT = 8; // peças mostradas por categoria na home
+  BANNER_IMG = 'assets/produtos/vestido-01.jpg'; // foto do banner da home (troque o arquivo para mudar)
+
+  // Catálogo. "ref" é o nome do arquivo em Fotos/ (sem .jpg); a foto vem de assets/produtos/<ref-em-minusculas>.jpg
+  PRODUCTS = (() => {
+    const U = ['Único'], P = ['P'], M = ['M'], G = ['G'], PM = ['P','M'], MG = ['M','G'], PG = ['P','G'], PMG = ['P','M','G'];
+    const un = (a, b) => a ? `Tamanho único · veste do ${a} ao ${b}` : 'Tamanho único';
+    const L = [];
+    const add = (ref, cat, name, price, sizes, desc, x = {}) => L.push({ ref, cat, name, price, sizes, desc, ...x });
+
+    // Vestidos
+    add('Vestido 01','Vestidos','Vestido Longo Viscose Sarjada',249.9,U,'Vestido longo em viscose sarjada, decote V, mangas bufantes e barra em camadas. Uma peça de cada cor.',{fit:un(),colors:['Marinho','Marrom','Caramelo']});
+    add('Vestido 02','Vestidos','Vestido Malha Premium',99.9,U,'Vestido em malha premium encorpada, que veste bem sem marcar.',{fit:un(36,40)});
+    add('Vestido 03','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
+    add('Vestido 04','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,42)});
+    add('Vestido 05','Vestidos','Vestido Longo Alças Finas',149.9,U,'Vestido longo em tom terracota, alças finas, decote nas costas e faixa para amarrar na cintura.',{fit:un()});
+    add('Vestido 06','Vestidos','Vestido Casual',75,U,'Vestido básico e versátil para o dia a dia.',{fit:un()});
+    add('Vestido 07','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
+    add('Vestido 08','Vestidos','Vestido Nula Manga Linho',149.9,U,'Vestido nula manga em linho, fresco e leve.',{fit:un(36,42)});
+    add('Vestido 09','Vestidos','Vestido Nula Manga',149.9,G,'Vestido nula manga de caimento leve.',{fit:'Tamanho G · veste 42'});
+    add('Vestido 10','Vestidos','Vestido Linho',149.9,P,'Vestido em linho, textura natural e toque fresco.',{fit:'Tamanho P'});
+    add('Vestido 11','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40)});
+    add('Vestido 12','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,42)});
+    add('Vestido 13','Vestidos','Vestido Tule Premium',129.9,U,'Vestido em tule premium, leve e delicado.',{fit:un(36,40)});
+    add('Vestido 14','Vestidos','Vestido Moletinho',149.9,U,'Vestido em moletinho macio, conforto com estilo.',{fit:un()});
+    add('Vestido 15','Vestidos','Vestido Viscolinho',189.9,PM,'Vestido em viscolinho, mistura de viscose e linho com caimento leve.',{fit:'Tamanhos P e M'});
+    add('Vestido 16','Vestidos','Vestido Midi Decote Quadrado',149.9,U,'Vestido midi verde-musgo com decote quadrado, alças largas e saia rodada em tecido estruturado.',{fit:un()});
+    add('Vestido 17','Vestidos','Vestido Tomara Que Caia Linho',299.9,PM,'Vestido tomara que caia em linho com algodão, corpete estruturado e saia ampla com bolsos.',{fit:'Tamanhos P e M'});
+    add('Vestido 18','Vestidos','Vestido Longo Regata',149.9,U,'Vestido longo regata em malha azul, modelagem reta e confortável.',{fit:un()});
+    add('Vestido 19','Vestidos','Vestido Viscose',139.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40)});
+    add('Vestido 20','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,42)});
+    add('Vestido 21','Vestidos','Vestido Cetim',189.9,U,'Vestido em cetim com brilho suave, ideal para festas.',{fit:un(36,40)});
+    add('Vestido 22','Vestidos','Vestido Cetim Costas Abertas',189.9,U,'Vestido longo em cetim off-white, alças finas e costas abertas.',{fit:un()});
+    add('Vestido 23','Vestidos','Vestido Malha Premium',189.9,U,'Vestido em malha premium, encorpado e confortável.',{fit:un(36,42)});
+    add('Vestido 24','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
+    add('Vestido 25','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,40)});
+    add('Vestido 26','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,40)});
+
+    // Conjuntos
+    add('Conjunto 01','Conjuntos','Conjunto Duas Peças',169.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un()});
+    add('Conjunto 02','Conjuntos','Conjunto Duas Peças',189.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un(36,40)});
+    add('Conjunto 03','Conjuntos','Conjunto Moletinho Premium',329.9,PMG,'Conjunto em moletinho premium, macio e quentinho, com caimento impecável.',{fit:'Tamanhos P, M e G'});
+    add('Conjunto 04','Conjuntos','Conjunto Linho',189.9,U,'Conjunto em linho, fresco e elegante.',{fit:un(36,40)});
+    add('Conjunto 05','Conjuntos','Conjunto Cropped e Pantalona',189.9,U,'Conjunto bege com jaqueta cropped de zíper e calça pantalona com cordão na cintura.',{fit:un()});
+    add('Conjunto 06','Conjuntos','Conjunto Tule Premium',249.9,U,'Conjunto em tule premium, leve e sofisticado.',{fit:un(36,40)});
+    add('Conjunto 07','Conjuntos','Conjunto Linho',149.9,MG,'Conjunto em linho, fresco e elegante.',{fit:'Tamanhos M e G'});
+    add('Conjunto 08','Conjuntos','Conjunto Malha Premium',189.9,U,'Conjunto em malha premium, confortável e versátil.',{fit:un(36,44)});
+    add('Conjunto 09','Conjuntos','Conjunto Duas Peças',199.9,PMG,'Conjunto de duas peças, disponível em preto e bege.',{fit:'Tamanhos P, M e G',colors:['Preto','Bege']});
+    add('Conjunto 10','Conjuntos','Conjunto Short e Colete',99.9,U,'Conjunto de short e colete, combinação moderna e fácil de usar.',{fit:un()});
+    add('Conjunto 11','Conjuntos','Conjunto Bata e Pantalona',189.9,U,'Conjunto azul-marinho com bata ampla de mangas curtas e pantalona fluida.',{fit:un()});
+    add('Conjunto 12','Conjuntos','Conjunto Linho com Algodão',129.9,U,'Conjunto em linho com algodão, leve e natural.',{fit:un()});
+    add('Conjunto 13','Conjuntos','Conjunto Colete e Short Alfaiataria',189.9,U,'Conjunto de colete e short em alfaiataria preta.',{fit:un()});
+    add('Conjunto 14','Conjuntos','Conjunto Duas Peças',189.9,M,'Conjunto de duas peças, prático para montar o look completo.',{fit:'Tamanho M'});
+
+    // Blusas
+    add('Blusa 01','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44)});
+    add('Blusa 02','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40)});
+    add('Blusa 03','Blusas','Blusa Canelada',65,U,'Blusa canelada, leve e fácil de combinar.',{fit:un(36,40)});
+    add('Blusa 04','Blusas','Blusa Malha Premium Rendada',89.9,U,'Blusa em malha premium com detalhes em renda.',{fit:un(36,42)});
+    add('Blusa 05','Blusas','Regata Poliamida',60,U,'Regata em poliamida, toque macio e modelagem ajustada.',{fit:un(36,40)});
+    add('Blusa 06','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44)});
+    add('Blusa 07','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40)});
+    add('Blusa 08','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
+    add('Blusa 09','Blusas','Blusa Manga Muscle',65,U,'Blusa com manga muscle, modelagem moderna.',{fit:un()});
+    add('Blusa 10','Blusas','Blusa Manga Morcego Tule',99.9,U,'Blusa em tule com manga morcego, leve e elegante.',{fit:un()});
+    add('Blusa 11','Blusas','Blusa Malha Premium',60,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
+    add('Blusa 12','Blusas','Blusa Moletinho Premium',79.9,U,'Blusa em moletinho premium, confortável e quentinha.',{fit:un()});
+    add('Blusa 13','Blusas','Body Renda Premium',139.9,U,'Body em renda premium, delicado e sofisticado.',{fit:un()});
+    add('Blusa 14','Blusas','Body Renda Gola Alta',139.9,U,'Body em renda com gola alta e manga longa, disponível em verde-oliva e preto.',{fit:un(),colors:['Verde-oliva','Preto']});
+    add('Blusa 15','Blusas','Blusa Malha Premium',65,P,'Blusa em malha premium, macia e versátil.',{fit:'Tamanho P'});
+    add('Blusa 16','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
+    add('Blusa 17','Blusas','Blusa Tricô Baly',79.9,PM,'Blusa em tricô baly, textura macia e caimento leve.',{fit:'Tamanhos P e M'});
+    add('Blusa 18','Blusas','Blusa Malha Premium',65,MG,'Blusa em malha premium, macia e versátil.',{fit:'Tamanhos M e G'});
+
+    // Camisas
+    add('Camisa 01','Camisas','Camisa Listras Crepe',99.9,PMG,'Camisa listrada em crepe, leve e com bom caimento.',{fit:'Tamanhos P, M e G'});
+    add('Camisa 02','Camisas','Camisa Crepe Acetinado',99.9,M,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanho M'});
+    add('Camisa 03','Camisas','Camisa Linho com Algodão',149.9,U,'Camisa em linho com algodão, fresca e natural.',{fit:un(36,42)});
+    add('Camisa 04','Camisas','Camisa Oversized Marinho',99.9,U,'Camisa oversized azul-marinho com ombros estruturados e bolsos frontais.',{fit:un()});
+    add('Camisa 05','Camisas','Camisa Cetim',149.9,U,'Camisa em cetim, elegante e fluida.',{fit:un()});
+    add('Camisa 06','Camisas','Camisa Crepe Acetinado',99.9,PMG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P, M e G'});
+    add('Camisa 07','Camisas','Camisa Crepe Acetinado',99.9,PM,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P e M'});
+    add('Camisa 08','Camisas','Camisa de Linho',149.9,PMG,'Camisa em linho, fresca e atemporal.',{fit:'Tamanhos P, M e G'});
+    add('Camisa 09','Camisas','Camisa Crepe Acetinado',99.9,MG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos M e G'});
+
+    // T-shirts: preço único, tamanho único
+    for (let i = 1; i <= 29; i++) { const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un()}); }
+
+    // Calças
+    add('Calça 01','Calças','Calça Alfaiataria',99.9,P,'Calça de alfaiataria, corte clássico e elegante.',{fit:'Tamanho P'});
+    add('Calça 02','Calças','Calça Pantalona',99.9,PG,'Calça pantalona de cintura alta, disponível em branco e preto.',{fit:'Tamanhos P e G',colors:['Branco','Preto']});
+    add('Calça 03','Calças','Calça Moletinho',149.9,U,'Calça em moletinho, conforto para o dia a dia.',{fit:un()});
+    add('Calça 04','Calças','Calça Linho com Algodão',149.9,PMG,'Calça em linho com algodão, disponível em preto, branco e azul.',{fit:'Tamanhos P, M e G',colors:['Preto','Branco','Azul']});
+    add('Calça 05','Calças','Calça Ballon',230,PM,'Calça ballon de modelagem ampla e barra ajustada.',{fit:'Tamanhos P e M'});
+    add('Calça 06','Calças','Calça Moletinho',149.9,M,'Calça em moletinho, conforto para o dia a dia.',{fit:'Tamanho M'});
+    add('Calça 07','Calças','Calça Pantalona',99.99,PM,'Calça pantalona de cintura alta e caimento fluido.',{fit:'Tamanhos P e M'});
+    add('Calça 08','Calças','Calça Casual',149.9,MG,'Calça de modelagem confortável para o dia a dia.',{fit:'Tamanhos M e G'});
+    add('Calça 09','Calças','Calça Cargo Alfaiataria',149.9,U,'Calça cargo em alfaiataria com bolsos laterais e cintura alta. Disponível em caramelo, bordô e marinho.',{fit:un(),colors:['Caramelo','Bordô','Marinho']});
+
+    // Shorts
+    add('Short 01','Shorts','Short Linho',119.9,PMG,'Short em linho, fresco e leve.',{fit:'Tamanhos P, M e G'});
+    add('Short 02','Shorts','Short Alfaiataria',119.9,PMG,'Short de alfaiataria, corte reto e elegante.',{fit:'Tamanhos P, M e G'});
+
+    // Macacões
+    add('Macacão 01','Macacões','Macacão',129.9,U,'Macacão de modelagem confortável, uma peça só para o look completo.',{fit:un(36,42)});
+
+    return L;
+  })();
+
+  fmt(v){ return 'R$ ' + v.toFixed(2).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
+  slug(ref){ return ref.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/\s+/g,'-'); }
+  nav(patch){ this.setState({ menuOpen:false, sizeError:false, ...patch }); window.scrollTo({top:0}); }
+  goCat(cat){ return e => { e && e.preventDefault && e.preventDefault(); this.nav({ view:'cat', cat }); }; }
+  openProduct(p){ return () => this.nav({ view:'product', prodId:p.id, color: p.colors ? p.colors[0] : null, size: p.sizes.length===1 ? p.sizes[0] : null }); }
+  showToast(msg){ clearTimeout(this._t); this.setState({toast:msg}); this._t = setTimeout(()=>this.setState({toast:''}), 2600); }
+
+  renderVals(){
+    const s = this.state;
+    const wa = String(this.props.whatsappNumber ?? '5562994766107').replace(/\D/g,'');
+    const cardRatio = (this.props.cardShape ?? 'Retrato') === 'Quadrado' ? '1/1' : '3/4';
+    const all = this.PRODUCTS.map((p,i) => { const id = this.slug(p.ref); return { ...p, id, img:`assets/produtos/${id}.jpg`, thumb:`assets/produtos/thumb/${id}.jpg`, tint:this.TINTS[i % this.TINTS.length], priceFmt:this.fmt(p.price) }; });
+    all.forEach(p => { p.open = this.openProduct(p); });
+    const withDelay = list => list.map((p,j) => ({ ...p, delay:`${Math.min(j,11)*40}ms` }));
+    const prod = s.prodId ? all.find(p=>p.id===s.prodId) : null;
+    const activeCat = s.view==='cat' ? s.cat : (s.view==='product' && prod ? prod.cat : null);
+    const navCats = this.CATS.map((c,i) => { const n = all.filter(p=>p.cat===c).length; return { name:c, go:this.goCat(c), goClose:this.goCat(c), line: activeCat===c ? '#B08A4D' : 'transparent', num: String(i+1).padStart(2,'0'), count: `${n} ${n===1?'peça':'peças'}`, delay:`${180+i*50}ms` }; });
+    const navStrip = [{ name:'Todas', cat:'Todas' }, ...this.CATS.map(c => ({ name:c, cat:c }))].map(o => ({ name:o.name, go:this.goCat(o.cat), line: (o.cat==='Todas' ? (s.view==='cat' && s.cat==='Todas') : activeCat===o.cat) ? '#B08A4D' : 'transparent' }));
+    const homeSections = this.CATS.map(c => { const items = all.filter(p=>p.cat===c); return { name:c, count: items.length, go:this.goCat(c), items: withDelay(items.slice(0, this.HOME_PER_CAT)) }; });
+    const filterCats = ['Todas', ...this.CATS].map(c => ({ name:c, go:this.goCat(c), color: s.cat===c ? '#B08A4D' : '#1f1b16', weight: s.cat===c ? 400 : 300 }));
+    const sizeFilters = ['Único','P','M','G'].map(z => { const on = s.sizes.includes(z); return { name:z, border: on?'#1f1b16':'#DCD3C4', bg: on?'#1f1b16':'#fff', color: on?'#fff':'#1f1b16',
+      toggle: () => this.setState(st => ({ sizes: on ? st.sizes.filter(x=>x!==z) : [...st.sizes, z] })) }; });
+    const filtered = withDelay(all.filter(p => (s.cat==='Todas' || p.cat===s.cat) && p.price <= s.maxPrice && (s.sizes.length===0 || s.sizes.some(z=>p.sizes.includes(z)))));
+    const colorOpts = prod && prod.colors ? prod.colors.map(c => ({ name:c, hex:this.COLORS[c] || '#DCD3C4', outline: s.color===c ? '#B08A4D' : 'transparent', select:()=>this.setState({color:c}) })) : [];
+    const sizeOpts = prod ? prod.sizes.map(z => { const on = s.size===z; return { name:z, border:on?'#1f1b16':'#DCD3C4', bg:on?'#1f1b16':'#fff', color:on?'#fff':'#1f1b16', select:()=>this.setState({size:z, sizeError:false}) }; }) : [];
+    const related = prod ? withDelay(all.filter(p=>p.cat===prod.cat && p.id!==prod.id).concat(all.filter(p=>p.cat!==prod.cat)).slice(0,4)) : [];
+    const cartItems = s.cart.map((it,i) => { const p = all.find(x=>x.id===it.id); return { ...it, name:p.name, ref:p.ref, thumb:p.thumb, tint:p.tint, variant:`Ref. ${p.ref} · ${it.color ? it.color + ' · ' : ''}Tam. ${it.size}`, lineFmt:this.fmt(p.price*it.qty), price:p.price,
+      inc:()=>this.setState(st=>({cart:st.cart.map((c,j)=>j===i?{...c,qty:c.qty+1}:c)})),
+      dec:()=>this.setState(st=>({cart:st.cart.map((c,j)=>j===i?{...c,qty:Math.max(1,c.qty-1)}:c)})),
+      remove:()=>this.setState(st=>({cart:st.cart.filter((_,j)=>j!==i)})) }; });
+    const total = cartItems.reduce((a,c)=>a+c.price*c.qty,0);
+    const count = cartItems.reduce((a,c)=>a+c.qty,0);
+    // Mensagem do pedido no formato do WhatsApp (*negrito*), uma peça por bloco e total no fim.
+    const many = cartItems.length > 1;
+    const blocks = cartItems.map((c,i) => {
+      const l = [ many ? `*${i+1}. ${c.name}*` : `*${c.name}*`, `Ref.: ${c.ref}` ];
+      if (c.color) l.push(`Cor: ${c.color}`);
+      l.push(`Tamanho: ${c.size}`);
+      l.push(c.qty > 1 ? `Qtd.: ${c.qty} x ${this.fmt(c.price)} = ${this.fmt(c.price*c.qty)}` : `Valor: ${this.fmt(c.price)}`);
+      return l.join('\n');
+    });
+    const msg = 'Olá, Lunari! 🌙\nGostaria de fazer um pedido:\n\n' + blocks.join('\n\n')
+      + '\n\n*Total: ' + this.fmt(total) + '*' + (count > 1 ? `\nTotal de peças: ${count}` : '')
+      + '\n\nAguardo o retorno para combinar pagamento e entrega. 😊';
+    return {
+      showAnnouncement: this.props.showAnnouncement ?? true, cardRatio,
+      navStrip, homeSections, bannerImg: this.BANNER_IMG,
+      isHome: s.view==='home', isCat: s.view==='cat', isProduct: s.view==='product' && !!prod,
+      menuOpen: s.menuOpen, toggleMenu: ()=>this.setState(st=>({menuOpen:!st.menuOpen})),
+      cartCount: count, cartCountLabel: count===1 ? '1 peça' : `${count} peças`,
+      goHome: e=>{ e&&e.preventDefault&&e.preventDefault(); this.nav({view:'home'}); },
+      goAll: this.goCat('Todas'), goAllClose: this.goCat('Todas'),
+      goProductCat: prod ? this.goCat(prod.cat) : null,
+      navCats, filterCats, sizeFilters, filtered, related,
+      filterKey: `${s.cat}|${s.sizes.join('')}|${s.maxPrice}`, catKey: s.cat, prodKey: s.prodId,
+      catTitle: s.cat==='Todas' ? 'Todas as peças' : s.cat,
+      resultCount: `${filtered.length} ${filtered.length===1?'peça':'peças'}`, noResults: filtered.length===0,
+      maxPrice: s.maxPrice, maxPriceFmt: this.fmt(s.maxPrice), setMaxPrice: e=>this.setState({maxPrice:+e.target.value}),
+      clearFilters: ()=>this.setState({sizes:[], maxPrice:350, cat:'Todas'}),
+      prod, activeImg: prod ? prod.img : '', activeTint: prod ? prod.tint : '',
+      colorOpts, hasColors: colorOpts.length>0, selColor: s.color, sizeOpts, sizeError: s.sizeError, hasFit: !!(prod && prod.fit),
+      addLabel: 'Adicionar à sacola',
+      addCurrent: ()=>{ if(!s.size){ this.setState({sizeError:true}); return; }
+        this.setState(st=>{ const k = st.cart.findIndex(c=>c.id===prod.id&&c.color===st.color&&c.size===st.size);
+          const cart = k>=0 ? st.cart.map((c,j)=>j===k?{...c,qty:c.qty+1}:c) : [...st.cart,{id:prod.id,color:st.color,size:st.size,qty:1}]; return {cart}; });
+        this.showToast(`${prod.name} adicionado à sacola`); },
+      cartOpen: s.cartOpen, openCart: ()=>this.setState({cartOpen:true, toast:''}), closeCart: ()=>this.setState({cartOpen:false}),
+      closeCartGoAll: ()=>{ this.setState({cartOpen:false}); this.nav({view:'cat',cat:'Todas'}); },
+      cartItems, cartEmpty: cartItems.length===0, cartHasItems: cartItems.length>0, totalFmt: this.fmt(total),
+      checkoutLink: `https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, waLink: `https://wa.me/${wa}`,
+      toast: s.toast,
+    };
+  }
+}
+</script>
+</body>
+</html>
