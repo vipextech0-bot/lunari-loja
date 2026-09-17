@@ -46,7 +46,7 @@ a,button{transition:color .2s ease,background-color .2s ease,border-color .2s ea
 .card .pr{font-size:14px;color:#7d6535;margin-top:4px}
 .card .rf{font-size:11px;letter-spacing:.08em;color:#8a8279;margin-top:3px}
 .banner{position:relative;display:block;overflow:hidden;aspect-ratio:5/2;background:#F1ECE3;cursor:pointer;margin-top:16px}
-.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .6s ease}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s ease}
 .banner:hover img{transform:scale(1.02)}
 .banner .cta{position:absolute;left:20px;bottom:20px;background:rgba(31,27,22,.9);color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;line-height:1}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:22px}
@@ -356,10 +356,23 @@ class Component extends DCLogic {
 
   CATS = ['Vestidos','Conjuntos','Blusas','Camisas','T-shirts','Calças','Shorts','Macacões'];
   TINTS = ['linear-gradient(160deg,#F4EBDD,#E9D5B4)','linear-gradient(160deg,#EFEAE2,#DCD3C4)','linear-gradient(160deg,#F6F1EA,#E6C79C)','linear-gradient(160deg,#ECE6DB,#CFC2AB)','linear-gradient(160deg,#F3EEE6,#E0D0B8)','linear-gradient(160deg,#EFE4D0,#D9BE95)'];
-  COLORS = { Preto:'#1f1b16', Branco:'#F5F2EC', 'Off-white':'#F3EEE6', Bege:'#D9C6A8', Caramelo:'#B8743F', Marrom:'#6B4A3A', 'Bordô':'#7A2E3B', Marinho:'#2F3A5A', Azul:'#4A5A73', 'Verde-oliva':'#6B6B3F', Dourado:'#B08A4D' };
+  COLORS = { 'Preto':'#1f1b16', 'Branco':'#F5F2EC', 'Off-white':'#F3EEE6', 'Bege':'#D9C6A8', 'Caramelo':'#B8743F', 'Marrom':'#6B4A3A', 'Bordô':'#7A2E3B',
+    'Marinho':'#2F3A5A', 'Azul':'#4A5A73', 'Azul-jeans':'#6A8CAF', 'Verde-oliva':'#6B6B3F', 'Verde-militar':'#4A5245', 'Verde-petróleo':'#2F5C57',
+    'Dourado':'#B08A4D', 'Cinza':'#6E6E6B', 'Cinza-taupe':'#8A8078', 'Rosa':'#E8C0C4', 'Lilás':'#B99BC0', 'Terracota':'#B0654A',
+    'Listrado marinho':'repeating-linear-gradient(45deg,#2F3A5A 0 3px,#F3EEE6 3px 6px)',
+    'Listrado azul':'repeating-linear-gradient(45deg,#6A8CAF 0 3px,#F3EEE6 3px 6px)',
+    'Listrado rosa':'repeating-linear-gradient(45deg,#E8AFB6 0 3px,#F3EEE6 3px 6px)',
+    'Listrado bordô':'repeating-linear-gradient(45deg,#7A2E3B 0 3px,#F3EEE6 3px 6px)',
+    'Listrado verde':'repeating-linear-gradient(45deg,#6B6B3F 0 3px,#F3EEE6 3px 6px)',
+    'Listrado cinza':'repeating-linear-gradient(45deg,#8A8078 0 3px,#F3EEE6 3px 6px)',
+    'Listrado marrom':'repeating-linear-gradient(45deg,#6B4A3A 0 3px,#F3EEE6 3px 6px)',
+    'Listrado off-white':'repeating-linear-gradient(45deg,#1f1b16 0 3px,#EDE6D8 3px 6px)',
+    'Off-white poá':'radial-gradient(#2F3A5A 1.6px,transparent 1.7px) 0 0/6px 6px,#F3EEE6',
+    'Bordô poá':'radial-gradient(#F3EEE6 1.6px,transparent 1.7px) 0 0/6px 6px,#7A2E3B', 'Preto estampado':'#1f1b16', 'Off-white estampado':'#EDE6D8',
+    'Verde estampado':'#2F5C57', 'Rosé estampado':'#C99A93', 'Estampado animal':'#B8743F', 'Estampado marsala':'#7A4A4A', 'Estampado azul':'#4A5A73' };
 
   HOME_PER_CAT = 8; // peças mostradas por categoria na home
-  BANNER_IMG = 'assets/produtos/vestido-01.jpg'; // foto do banner da home (troque o arquivo para mudar)
+  BANNER_IMG = 'assets/produtos/calca-09.jpg'; // foto do banner da home (troque o arquivo para mudar)
 
   // Catálogo. "ref" é o nome do arquivo em Fotos/ (sem .jpg); a foto vem de assets/produtos/<ref-em-minusculas>.jpg
   PRODUCTS = (() => {
@@ -370,99 +383,100 @@ class Component extends DCLogic {
 
     // Vestidos
     add('Vestido 01','Vestidos','Vestido Longo Viscose Sarjada',249.9,U,'Vestido longo em viscose sarjada, decote V, mangas bufantes e barra em camadas. Uma peça de cada cor.',{fit:un(),colors:['Marinho','Marrom','Caramelo']});
-    add('Vestido 02','Vestidos','Vestido Malha Premium',99.9,U,'Vestido em malha premium encorpada, que veste bem sem marcar.',{fit:un(36,40)});
-    add('Vestido 03','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
-    add('Vestido 04','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,42)});
-    add('Vestido 05','Vestidos','Vestido Longo Alças Finas',149.9,U,'Vestido longo em tom terracota, alças finas, decote nas costas e faixa para amarrar na cintura.',{fit:un()});
-    add('Vestido 06','Vestidos','Vestido Casual',75,U,'Vestido básico e versátil para o dia a dia.',{fit:un()});
-    add('Vestido 07','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
-    add('Vestido 08','Vestidos','Vestido Nula Manga Linho',149.9,U,'Vestido nula manga em linho, fresco e leve.',{fit:un(36,42)});
-    add('Vestido 09','Vestidos','Vestido Nula Manga',149.9,G,'Vestido nula manga de caimento leve.',{fit:'Tamanho G · veste 42'});
-    add('Vestido 10','Vestidos','Vestido Linho',149.9,P,'Vestido em linho, textura natural e toque fresco.',{fit:'Tamanho P'});
-    add('Vestido 11','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40)});
-    add('Vestido 12','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,42)});
-    add('Vestido 13','Vestidos','Vestido Tule Premium',129.9,U,'Vestido em tule premium, leve e delicado.',{fit:un(36,40)});
-    add('Vestido 14','Vestidos','Vestido Moletinho',149.9,U,'Vestido em moletinho macio, conforto com estilo.',{fit:un()});
-    add('Vestido 15','Vestidos','Vestido Viscolinho',189.9,PM,'Vestido em viscolinho, mistura de viscose e linho com caimento leve.',{fit:'Tamanhos P e M'});
-    add('Vestido 16','Vestidos','Vestido Midi Decote Quadrado',149.9,U,'Vestido midi verde-musgo com decote quadrado, alças largas e saia rodada em tecido estruturado.',{fit:un()});
-    add('Vestido 17','Vestidos','Vestido Tomara Que Caia Linho',299.9,PM,'Vestido tomara que caia em linho com algodão, corpete estruturado e saia ampla com bolsos.',{fit:'Tamanhos P e M'});
-    add('Vestido 18','Vestidos','Vestido Longo Regata',149.9,U,'Vestido longo regata em malha azul, modelagem reta e confortável.',{fit:un()});
-    add('Vestido 19','Vestidos','Vestido Viscose',139.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40)});
-    add('Vestido 20','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,42)});
-    add('Vestido 21','Vestidos','Vestido Cetim',189.9,U,'Vestido em cetim com brilho suave, ideal para festas.',{fit:un(36,40)});
-    add('Vestido 22','Vestidos','Vestido Cetim Costas Abertas',189.9,U,'Vestido longo em cetim off-white, alças finas e costas abertas.',{fit:un()});
-    add('Vestido 23','Vestidos','Vestido Malha Premium',189.9,U,'Vestido em malha premium, encorpado e confortável.',{fit:un(36,42)});
-    add('Vestido 24','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40)});
-    add('Vestido 25','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,40)});
-    add('Vestido 26','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,40)});
+    add('Vestido 02','Vestidos','Vestido Malha Premium',99.9,U,'Vestido em malha premium encorpada, que veste bem sem marcar.',{fit:un(36,40),colors:['Preto']});
+    add('Vestido 03','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40),colors:['Verde estampado']});
+    add('Vestido 04','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,42),colors:['Marrom']});
+    add('Vestido 05','Vestidos','Vestido Longo Alças Finas',149.9,U,'Vestido longo em tom terracota, alças finas, decote nas costas e faixa para amarrar na cintura.',{fit:un(),colors:['Marrom']});
+    add('Vestido 06','Vestidos','Vestido Casual',75,U,'Vestido básico e versátil para o dia a dia.',{fit:un(),colors:['Preto']});
+    add('Vestido 07','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40),colors:['Marrom']});
+    add('Vestido 08','Vestidos','Vestido Nula Manga Linho',149.9,U,'Vestido nula manga em linho, fresco e leve.',{fit:un(36,42),colors:['Lilás']});
+    add('Vestido 09','Vestidos','Vestido Nula Manga',149.9,G,'Vestido nula manga de caimento leve.',{fit:'Tamanho G · veste 42',colors:['Azul']});
+    add('Vestido 10','Vestidos','Vestido Linho',149.9,P,'Vestido em linho, textura natural e toque fresco.',{fit:'Tamanho P',colors:['Verde-militar']});
+    add('Vestido 11','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40),colors:['Off-white estampado']});
+    add('Vestido 12','Vestidos','Vestido Viscose',149.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,42),colors:['Off-white estampado']});
+    add('Vestido 13','Vestidos','Vestido Tule Premium',129.9,U,'Vestido em tule premium, leve e delicado.',{fit:un(36,40),colors:['Preto']});
+    add('Vestido 14','Vestidos','Vestido Moletinho',149.9,U,'Vestido em moletinho macio, conforto com estilo.',{fit:un(),colors:['Azul-jeans','Cinza']});
+    add('Vestido 15','Vestidos','Vestido Viscolinho',189.9,PM,'Vestido em viscolinho, mistura de viscose e linho com caimento leve.',{fit:'Tamanhos P e M',colors:['Verde-militar']});
+    add('Vestido 16','Vestidos','Vestido Midi Decote Quadrado',149.9,U,'Vestido midi verde-musgo com decote quadrado, alças largas e saia rodada em tecido estruturado.',{fit:un(),colors:['Verde-militar']});
+    add('Vestido 17','Vestidos','Vestido Tomara Que Caia Linho',299.9,PM,'Vestido tomara que caia em linho com algodão, corpete estruturado e saia ampla com bolsos.',{fit:'Tamanhos P e M',colors:['Preto']});
+    add('Vestido 18','Vestidos','Vestido Longo Regata',149.9,U,'Vestido longo regata em malha azul, modelagem reta e confortável.',{fit:un(),colors:['Azul-jeans']});
+    add('Vestido 19','Vestidos','Vestido Viscose',139.9,U,'Vestido em viscose fluida, leve e confortável.',{fit:un(36,40),colors:['Preto estampado']});
+    add('Vestido 20','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,42),colors:['Off-white']});
+    add('Vestido 21','Vestidos','Vestido Cetim',189.9,U,'Vestido em cetim com brilho suave, ideal para festas.',{fit:un(36,40),colors:['Off-white']});
+    add('Vestido 22','Vestidos','Vestido Cetim Costas Abertas',189.9,U,'Vestido longo em cetim off-white, alças finas e costas abertas.',{fit:un(),colors:['Off-white']});
+    add('Vestido 23','Vestidos','Vestido Malha Premium',189.9,U,'Vestido em malha premium, encorpado e confortável.',{fit:un(36,42),colors:['Listrado marinho']});
+    add('Vestido 24','Vestidos','Vestido Tule Premium',220,U,'Vestido em tule premium, leve e elegante para ocasiões especiais.',{fit:un(36,40),colors:['Rosé estampado']});
+    add('Vestido 25','Vestidos','Vestido Viscose Premium',149.9,U,'Vestido em viscose premium, toque macio e caimento fluido.',{fit:un(36,40),colors:['Preto estampado']});
+    add('Vestido 26','Vestidos','Vestido Viscose',249.9,U,'Vestido em viscose fluida, caimento leve e confortável.',{fit:un(36,40),colors:['Marinho']});
 
     // Conjuntos
-    add('Conjunto 01','Conjuntos','Conjunto Duas Peças',169.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un()});
-    add('Conjunto 02','Conjuntos','Conjunto Duas Peças',189.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un(36,40)});
-    add('Conjunto 03','Conjuntos','Conjunto Moletinho Premium',329.9,PMG,'Conjunto em moletinho premium, macio e quentinho, com caimento impecável.',{fit:'Tamanhos P, M e G'});
-    add('Conjunto 04','Conjuntos','Conjunto Linho',189.9,U,'Conjunto em linho, fresco e elegante.',{fit:un(36,40)});
-    add('Conjunto 05','Conjuntos','Conjunto Cropped e Pantalona',189.9,U,'Conjunto bege com jaqueta cropped de zíper e calça pantalona com cordão na cintura.',{fit:un()});
-    add('Conjunto 06','Conjuntos','Conjunto Tule Premium',249.9,U,'Conjunto em tule premium, leve e sofisticado.',{fit:un(36,40)});
-    add('Conjunto 07','Conjuntos','Conjunto Linho',149.9,MG,'Conjunto em linho, fresco e elegante.',{fit:'Tamanhos M e G'});
-    add('Conjunto 08','Conjuntos','Conjunto Malha Premium',189.9,U,'Conjunto em malha premium, confortável e versátil.',{fit:un(36,44)});
+    add('Conjunto 01','Conjuntos','Conjunto Duas Peças',169.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un(),colors:['Listrado cinza']});
+    add('Conjunto 02','Conjuntos','Conjunto Duas Peças',189.9,U,'Conjunto de duas peças, prático para montar o look completo.',{fit:un(36,40),colors:['Preto']});
+    add('Conjunto 03','Conjuntos','Conjunto Moletinho Premium',329.9,PMG,'Conjunto em moletinho premium, macio e quentinho, com caimento impecável.',{fit:'Tamanhos P, M e G',colors:['Marrom']});
+    add('Conjunto 04','Conjuntos','Conjunto Linho',189.9,U,'Conjunto em linho, fresco e elegante.',{fit:un(36,40),colors:['Listrado azul']});
+    add('Conjunto 05','Conjuntos','Conjunto Cropped e Pantalona',189.9,U,'Conjunto bege com jaqueta cropped de zíper e calça pantalona com cordão na cintura.',{fit:un(),colors:['Bege']});
+    add('Conjunto 06','Conjuntos','Conjunto Tule Premium',249.9,U,'Conjunto em tule premium, leve e sofisticado.',{fit:un(36,40),colors:['Preto estampado']});
+    add('Conjunto 07','Conjuntos','Conjunto Linho',149.9,MG,'Conjunto em linho, fresco e elegante.',{fit:'Tamanhos M e G',colors:['Off-white']});
+    add('Conjunto 08','Conjuntos','Conjunto Malha Premium',189.9,U,'Conjunto em malha premium, confortável e versátil.',{fit:un(36,44),colors:['Preto']});
     add('Conjunto 09','Conjuntos','Conjunto Duas Peças',199.9,PMG,'Conjunto de duas peças, disponível em preto e bege.',{fit:'Tamanhos P, M e G',colors:['Preto','Bege']});
-    add('Conjunto 10','Conjuntos','Conjunto Short e Colete',99.9,U,'Conjunto de short e colete, combinação moderna e fácil de usar.',{fit:un()});
-    add('Conjunto 11','Conjuntos','Conjunto Bata e Pantalona',189.9,U,'Conjunto azul-marinho com bata ampla de mangas curtas e pantalona fluida.',{fit:un()});
-    add('Conjunto 12','Conjuntos','Conjunto Linho com Algodão',129.9,U,'Conjunto em linho com algodão, leve e natural.',{fit:un()});
-    add('Conjunto 13','Conjuntos','Conjunto Colete e Short Alfaiataria',189.9,U,'Conjunto de colete e short em alfaiataria preta.',{fit:un()});
-    add('Conjunto 14','Conjuntos','Conjunto Duas Peças',189.9,M,'Conjunto de duas peças, prático para montar o look completo.',{fit:'Tamanho M'});
+    add('Conjunto 10','Conjuntos','Conjunto Short e Colete',99.9,U,'Conjunto de short e colete, combinação moderna e fácil de usar.',{fit:un(),colors:['Marrom']});
+    add('Conjunto 11','Conjuntos','Conjunto Bata e Pantalona',189.9,U,'Conjunto azul-marinho com bata ampla de mangas curtas e pantalona fluida.',{fit:un(),colors:['Marinho']});
+    add('Conjunto 12','Conjuntos','Conjunto Linho com Algodão',129.9,U,'Conjunto em linho com algodão, leve e natural.',{fit:un(),colors:['Listrado verde']});
+    add('Conjunto 13','Conjuntos','Conjunto Colete e Short Alfaiataria',189.9,U,'Conjunto de colete e short em alfaiataria preta.',{fit:un(),colors:['Preto']});
+    add('Conjunto 14','Conjuntos','Conjunto Duas Peças',189.9,M,'Conjunto de duas peças, prático para montar o look completo.',{fit:'Tamanho M',colors:['Listrado off-white']});
 
     // Blusas
-    add('Blusa 01','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44)});
-    add('Blusa 02','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40)});
-    add('Blusa 03','Blusas','Blusa Canelada',65,U,'Blusa canelada, leve e fácil de combinar.',{fit:un(36,40)});
-    add('Blusa 04','Blusas','Blusa Malha Premium Rendada',89.9,U,'Blusa em malha premium com detalhes em renda.',{fit:un(36,42)});
-    add('Blusa 05','Blusas','Regata Poliamida',60,U,'Regata em poliamida, toque macio e modelagem ajustada.',{fit:un(36,40)});
-    add('Blusa 06','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44)});
-    add('Blusa 07','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40)});
-    add('Blusa 08','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
-    add('Blusa 09','Blusas','Blusa Manga Muscle',65,U,'Blusa com manga muscle, modelagem moderna.',{fit:un()});
-    add('Blusa 10','Blusas','Blusa Manga Morcego Tule',99.9,U,'Blusa em tule com manga morcego, leve e elegante.',{fit:un()});
-    add('Blusa 11','Blusas','Blusa Malha Premium',60,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
-    add('Blusa 12','Blusas','Blusa Moletinho Premium',79.9,U,'Blusa em moletinho premium, confortável e quentinha.',{fit:un()});
-    add('Blusa 13','Blusas','Body Renda Premium',139.9,U,'Body em renda premium, delicado e sofisticado.',{fit:un()});
+    add('Blusa 01','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44),colors:['Preto','Off-white','Verde-oliva']});
+    add('Blusa 02','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40),colors:['Bege','Marrom','Marinho']});
+    add('Blusa 03','Blusas','Blusa Canelada',65,U,'Blusa canelada, leve e fácil de combinar.',{fit:un(36,40),colors:['Rosa','Off-white','Preto']});
+    add('Blusa 04','Blusas','Blusa Malha Premium Rendada',89.9,U,'Blusa em malha premium com detalhes em renda.',{fit:un(36,42),colors:['Preto']});
+    add('Blusa 05','Blusas','Regata Poliamida',60,U,'Regata em poliamida, toque macio e modelagem ajustada.',{fit:un(36,40),colors:['Marrom','Marinho','Off-white']});
+    add('Blusa 06','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44),colors:['Verde-oliva','Marrom','Marinho','Off-white']});
+    add('Blusa 07','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40),colors:['Preto','Marrom','Rosa','Marinho']});
+    add('Blusa 08','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Marrom','Lilás']});
+    add('Blusa 09','Blusas','Blusa Manga Muscle',65,U,'Blusa com manga muscle, modelagem moderna.',{fit:un(),colors:['Verde-militar','Preto']});
+    add('Blusa 10','Blusas','Blusa Manga Morcego Tule',99.9,U,'Blusa em tule com manga morcego, leve e elegante.',{fit:un(),colors:['Estampado marsala','Estampado azul']});
+    add('Blusa 11','Blusas','Blusa Malha Premium',60,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Listrado bordô']});
+    add('Blusa 12','Blusas','Blusa Moletinho Premium',79.9,U,'Blusa em moletinho premium, confortável e quentinha.',{fit:un(),colors:['Cinza-taupe','Terracota']});
+    add('Blusa 13','Blusas','Body Renda Premium',139.9,U,'Body em renda premium, delicado e sofisticado.',{fit:un(),colors:['Verde-oliva']});
     add('Blusa 14','Blusas','Body Renda Gola Alta',139.9,U,'Body em renda com gola alta e manga longa, disponível em verde-oliva e preto.',{fit:un(),colors:['Verde-oliva','Preto']});
-    add('Blusa 15','Blusas','Blusa Malha Premium',65,P,'Blusa em malha premium, macia e versátil.',{fit:'Tamanho P'});
-    add('Blusa 16','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un()});
-    add('Blusa 17','Blusas','Blusa Tricô Baly',79.9,PM,'Blusa em tricô baly, textura macia e caimento leve.',{fit:'Tamanhos P e M'});
-    add('Blusa 18','Blusas','Blusa Malha Premium',65,MG,'Blusa em malha premium, macia e versátil.',{fit:'Tamanhos M e G'});
+    add('Blusa 15','Blusas','Blusa Malha Premium',65,P,'Blusa em malha premium, macia e versátil.',{fit:'Tamanho P',colors:['Off-white poá']});
+    add('Blusa 16','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Listrado marinho']});
+    add('Blusa 17','Blusas','Blusa Tricô Baly',79.9,PM,'Blusa em tricô baly, textura macia e caimento leve.',{fit:'Tamanhos P e M',colors:['Off-white']});
+    add('Blusa 18','Blusas','Blusa Malha Premium',65,MG,'Blusa em malha premium, macia e versátil.',{fit:'Tamanhos M e G',colors:['Marinho','Off-white','Bordô']});
 
     // Camisas
-    add('Camisa 01','Camisas','Camisa Listras Crepe',99.9,PMG,'Camisa listrada em crepe, leve e com bom caimento.',{fit:'Tamanhos P, M e G'});
-    add('Camisa 02','Camisas','Camisa Crepe Acetinado',99.9,M,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanho M'});
-    add('Camisa 03','Camisas','Camisa Linho com Algodão',149.9,U,'Camisa em linho com algodão, fresca e natural.',{fit:un(36,42)});
-    add('Camisa 04','Camisas','Camisa Oversized Marinho',99.9,U,'Camisa oversized azul-marinho com ombros estruturados e bolsos frontais.',{fit:un()});
-    add('Camisa 05','Camisas','Camisa Cetim',149.9,U,'Camisa em cetim, elegante e fluida.',{fit:un()});
-    add('Camisa 06','Camisas','Camisa Crepe Acetinado',99.9,PMG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P, M e G'});
-    add('Camisa 07','Camisas','Camisa Crepe Acetinado',99.9,PM,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P e M'});
-    add('Camisa 08','Camisas','Camisa de Linho',149.9,PMG,'Camisa em linho, fresca e atemporal.',{fit:'Tamanhos P, M e G'});
-    add('Camisa 09','Camisas','Camisa Crepe Acetinado',99.9,MG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos M e G'});
+    add('Camisa 01','Camisas','Camisa Listras Crepe',99.9,PMG,'Camisa listrada em crepe, leve e com bom caimento.',{fit:'Tamanhos P, M e G',colors:['Listrado azul','Rosa','Listrado marrom']});
+    add('Camisa 02','Camisas','Camisa Crepe Acetinado',99.9,M,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanho M',colors:['Marrom']});
+    add('Camisa 03','Camisas','Camisa Linho com Algodão',149.9,U,'Camisa em linho com algodão, fresca e natural.',{fit:un(36,42),colors:['Off-white']});
+    add('Camisa 04','Camisas','Camisa Oversized Marinho',99.9,U,'Camisa oversized azul-marinho com ombros estruturados e bolsos frontais.',{fit:un(),colors:['Marinho']});
+    add('Camisa 05','Camisas','Camisa Cetim',149.9,U,'Camisa em cetim, elegante e fluida.',{fit:un(),colors:['Off-white']});
+    add('Camisa 06','Camisas','Camisa Crepe Acetinado',99.9,PMG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P, M e G',colors:['Off-white']});
+    add('Camisa 07','Camisas','Camisa Crepe Acetinado',99.9,PM,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P e M',colors:['Off-white poá']});
+    add('Camisa 08','Camisas','Camisa de Linho',149.9,PMG,'Camisa em linho, fresca e atemporal.',{fit:'Tamanhos P, M e G',colors:['Marinho','Off-white']});
+    add('Camisa 09','Camisas','Camisa Crepe Acetinado',99.9,MG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos M e G',colors:['Estampado animal']});
 
     // T-shirts: preço único, tamanho único
-    for (let i = 1; i <= 29; i++) { const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un()}); }
+    const TCOR = {1:'Bordô poá',2:'Marrom',3:'Marrom',6:'Preto',7:'Listrado rosa',25:'Marrom'};
+    for (let i = 1; i <= 29; i++) { const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un(),colors:[TCOR[i] || 'Off-white']}); }
 
     // Calças
-    add('Calça 01','Calças','Calça Alfaiataria',99.9,P,'Calça de alfaiataria, corte clássico e elegante.',{fit:'Tamanho P'});
+    add('Calça 01','Calças','Calça Alfaiataria',99.9,P,'Calça de alfaiataria, corte clássico e elegante.',{fit:'Tamanho P',colors:['Azul-jeans','Marrom']});
     add('Calça 02','Calças','Calça Pantalona',99.9,PG,'Calça pantalona de cintura alta, disponível em branco e preto.',{fit:'Tamanhos P e G',colors:['Branco','Preto']});
-    add('Calça 03','Calças','Calça Moletinho',149.9,U,'Calça em moletinho, conforto para o dia a dia.',{fit:un()});
+    add('Calça 03','Calças','Calça Moletinho',149.9,U,'Calça em moletinho, conforto para o dia a dia.',{fit:un(),colors:['Azul-jeans']});
     add('Calça 04','Calças','Calça Linho com Algodão',149.9,PMG,'Calça em linho com algodão, disponível em preto, branco e azul.',{fit:'Tamanhos P, M e G',colors:['Preto','Branco','Azul']});
-    add('Calça 05','Calças','Calça Ballon',230,PM,'Calça ballon de modelagem ampla e barra ajustada.',{fit:'Tamanhos P e M'});
-    add('Calça 06','Calças','Calça Moletinho',149.9,M,'Calça em moletinho, conforto para o dia a dia.',{fit:'Tamanho M'});
-    add('Calça 07','Calças','Calça Pantalona',99.99,PM,'Calça pantalona de cintura alta e caimento fluido.',{fit:'Tamanhos P e M'});
-    add('Calça 08','Calças','Calça Casual',149.9,MG,'Calça de modelagem confortável para o dia a dia.',{fit:'Tamanhos M e G'});
+    add('Calça 05','Calças','Calça Ballon',230,PM,'Calça ballon de modelagem ampla e barra ajustada.',{fit:'Tamanhos P e M',colors:['Off-white poá']});
+    add('Calça 06','Calças','Calça Moletinho',149.9,M,'Calça em moletinho, conforto para o dia a dia.',{fit:'Tamanho M',colors:['Marinho']});
+    add('Calça 07','Calças','Calça Pantalona',99.99,PM,'Calça pantalona de cintura alta e caimento fluido.',{fit:'Tamanhos P e M',colors:['Marrom']});
+    add('Calça 08','Calças','Calça Casual',149.9,MG,'Calça de modelagem confortável para o dia a dia.',{fit:'Tamanhos M e G',colors:['Listrado marinho']});
     add('Calça 09','Calças','Calça Cargo Alfaiataria',149.9,U,'Calça cargo em alfaiataria com bolsos laterais e cintura alta. Disponível em caramelo, bordô e marinho.',{fit:un(),colors:['Caramelo','Bordô','Marinho']});
 
     // Shorts
-    add('Short 01','Shorts','Short Linho',119.9,PMG,'Short em linho, fresco e leve.',{fit:'Tamanhos P, M e G'});
-    add('Short 02','Shorts','Short Alfaiataria',119.9,PMG,'Short de alfaiataria, corte reto e elegante.',{fit:'Tamanhos P, M e G'});
+    add('Short 01','Shorts','Short Linho',119.9,PMG,'Short em linho, fresco e leve.',{fit:'Tamanhos P, M e G',colors:['Listrado bordô','Listrado azul','Listrado rosa']});
+    add('Short 02','Shorts','Short Alfaiataria',119.9,PMG,'Short de alfaiataria, corte reto e elegante.',{fit:'Tamanhos P, M e G',colors:['Off-white','Marrom']});
 
     // Macacões
-    add('Macacão 01','Macacões','Macacão',129.9,U,'Macacão de modelagem confortável, uma peça só para o look completo.',{fit:un(36,42)});
+    add('Macacão 01','Macacões','Macacão',129.9,U,'Macacão de modelagem confortável, uma peça só para o look completo.',{fit:un(36,42),colors:['Bordô','Preto']});
 
     return L;
   })();
