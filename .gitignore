@@ -1,2 +1,5 @@
 .DS_Store
 Fotos/
+FotoBanner.png
+.vercel
+.env*

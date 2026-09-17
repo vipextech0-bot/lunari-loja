@@ -69,6 +69,7 @@ a,button{transition:color .2s ease,background-color .2s ease,border-color .2s ea
   .nav-wrap::after{content:"";position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.96));pointer-events:none}
   .grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}
   .banner{aspect-ratio:4/3;margin-top:12px}
+  .banner img{object-position:right}
   .banner .cta{left:12px;bottom:12px;padding:11px 14px;font-size:11px}
   .card .nm{font-size:13px;padding-top:10px}
   .card .pr{font-size:13px;margin-top:2px}
@@ -372,7 +373,7 @@ class Component extends DCLogic {
     'Verde estampado':'#2F5C57', 'Rosé estampado':'#C99A93', 'Estampado animal':'#B8743F', 'Estampado marsala':'#7A4A4A', 'Estampado azul':'#4A5A73' };
 
   HOME_PER_CAT = 8; // peças mostradas por categoria na home
-  BANNER_IMG = 'assets/produtos/calca-09.jpg'; // foto do banner da home (troque o arquivo para mudar)
+  BANNER_IMG = 'assets/banner.jpg'; // foto do banner da home (2,5:1 — troque o arquivo para mudar)
 
   // Catálogo. "ref" é o nome do arquivo em Fotos/ (sem .jpg); a foto vem de assets/produtos/<ref-em-minusculas>.jpg
   PRODUCTS = (() => {
