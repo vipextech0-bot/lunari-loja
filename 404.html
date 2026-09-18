@@ -406,7 +406,8 @@ class Component extends DCLogic {
     'Listrado off-white':'repeating-linear-gradient(45deg,#1f1b16 0 3px,#EDE6D8 3px 6px)',
     'Off-white poá':'radial-gradient(#2F3A5A 1.6px,transparent 1.7px) 0 0/6px 6px,#F3EEE6',
     'Bordô poá':'radial-gradient(#F3EEE6 1.6px,transparent 1.7px) 0 0/6px 6px,#7A2E3B', 'Preto estampado':'#1f1b16', 'Off-white estampado':'#EDE6D8',
-    'Verde estampado':'#2F5C57', 'Rosé estampado':'#C99A93', 'Estampado animal':'#B8743F', 'Estampado marsala':'#7A4A4A', 'Estampado azul':'#4A5A73' };
+    'Verde estampado':'#2F5C57', 'Rosé estampado':'#C99A93', 'Estampado animal':'#B8743F', 'Estampado marsala':'#7A4A4A', 'Estampado azul':'#4A5A73',
+    'Amarelo':'#EFE3A0', 'Verde poá':'radial-gradient(#1f1b16 1.6px,transparent 1.7px) 0 0/6px 6px,#9DBFB4', 'Estampado terracota':'#A0522D' };
 
   HOME_PER_CAT = 8; // peças mostradas por categoria na home
   BANNER_IMG = 'assets/banner.jpg'; // foto do banner da home (2,5:1 — troque o arquivo para mudar)
@@ -473,11 +474,15 @@ class Component extends DCLogic {
     add('Blusa 15','Blusas','Blusa Malha Premium',65,P,'Blusa em malha premium, macia e versátil.',{fit:'Tamanho P',colors:['Off-white poá']});
     add('Blusa 17','Blusas','Blusa Tricô Baly',79.9,PM,'Blusa em tricô baly, textura macia e caimento leve.',{fit:'Tamanhos P e M',colors:['Off-white']});
     add('Blusa 18','Blusas','Blusa Malha Premium',65,MG,'Blusa em malha premium, macia e versátil.',{fit:'Tamanhos M e G',colors:['Marinho','Off-white','Bordô']});
+    add('Blusa 19','Blusas','Blusa Malha Fria',60,U,'Blusa em malha fria de caimento solto e manga curta, fresca para os dias quentes. Disponível em poá verde e estampa terracota.',{fit:un(),colors:['Verde poá','Estampado terracota']});
+    add('Blusa 20','Blusas','Blusa Malha Premium Punho Listrado',65,MG,'Blusa em malha premium, gola redonda e punho com listra contrastante. Básica e fácil de combinar.',{fit:'Tamanhos M e G',colors:['Amarelo','Lilás']});
+    add('Blusa 21','Blusas','Blusa Malha Premium Listrada',75,MG,'Blusa em malha premium listrada, gola e punhos canelados e botões dourados no ombro.',{fit:'Tamanhos M e G',colors:['Listrado marinho','Listrado marrom'],photos:['Blusa 22'],colorPhotos:true});
+    add('Blusa 23','Blusas','Blusa Luna',149.9,PM,'Blusa estruturada sem manga, ombros marcados, decote transpassado e faixa para amarrar na cintura.',{fit:'Tamanhos P e M',colors:['Preto']});
 
     // Camisas
     add('Camisa 01','Camisas','Camisa Listras Crepe',99.9,PMG,'Camisa listrada em crepe, leve e com bom caimento.',{fit:'Tamanhos P, M e G',colors:['Listrado azul','Rosa','Listrado marrom']});
     add('Camisa 02','Camisas','Camisa Crepe Acetinado',99.9,M,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanho M',colors:['Marrom']});
-    add('Camisa 03','Camisas','Camisa Ombro Estruturado',149.9,U,'Camisa em linho com algodão, ombro estruturado e bolso frontal. Disponível em off-white e marinho.',{fit:un(36,42),colors:['Off-white','Marinho'],photos:['Camisa 04']});
+    add('Camisa 03','Camisas','Camisa Ombro Estruturado',149.9,U,'Camisa em linho com algodão, ombro estruturado e bolso frontal. Disponível em off-white e marinho.',{fit:un(36,42),colors:['Off-white','Marinho'],photos:['Camisa 04'],colorPhotos:true});
     add('Camisa 05','Camisas','Camisa Cetim',149.9,U,'Camisa em cetim, elegante e fluida.',{fit:un(),colors:['Off-white']});
     add('Camisa 06','Camisas','Camisa Crepe Acetinado',99.9,PMG,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P, M e G',colors:['Off-white']});
     add('Camisa 07','Camisas','Camisa Crepe Acetinado',99.9,PM,'Camisa em crepe acetinado, toque suave e brilho discreto.',{fit:'Tamanhos P e M',colors:['Off-white poá']});
@@ -488,7 +493,7 @@ class Component extends DCLogic {
     const TCOR = {1:['Bordô poá'],2:['Marrom','Off-white'],3:['Marrom'],6:['Preto'],7:['Listrado rosa'],25:['Marrom']};
     const TFOTO = {2:['T-shirt 17'],9:['T-shirt 14']};  // mesma estampa fotografada duas vezes
     const TPULA = new Set([1,14,17]);  // 01 removida a pedido; 14 e 17 viraram fotos de outras
-    for (let i = 1; i <= 29; i++) { if (TPULA.has(i)) continue; const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un(),colors:TCOR[i] || ['Off-white'],photos:TFOTO[i]}); }
+    for (let i = 1; i <= 29; i++) { if (TPULA.has(i)) continue; const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un(),colors:TCOR[i] || ['Off-white'],photos:TFOTO[i],colorPhotos:i===2}); }
 
     // Calças
     add('Calça 01','Calças','Calça Alfaiataria',99.9,P,'Calça de alfaiataria, corte clássico e elegante.',{fit:'Tamanho P',colors:['Azul-jeans','Marrom']});
@@ -504,6 +509,7 @@ class Component extends DCLogic {
     // Shorts
     add('Short 01','Shorts','Short Linho',119.9,PMG,'Short em linho, fresco e leve.',{fit:'Tamanhos P, M e G',colors:['Listrado bordô','Listrado azul','Listrado rosa']});
     add('Short 02','Shorts','Short Alfaiataria',119.9,PMG,'Short de alfaiataria, corte reto e elegante.',{fit:'Tamanhos P, M e G',colors:['Off-white','Marrom']});
+    add('Short 03','Shorts','Short Linho Listrado',89.99,PMG,'Short em linho listrado com cós de elástico, cordão para amarrar e barra dobrada.',{fit:'Tamanhos P, M e G',colors:['Listrado azul']});
 
     // Macacões
     add('Macacão 01','Macacões','Macacão',129.9,U,'Macacão de modelagem confortável, uma peça só para o look completo.',{fit:un(36,42),colors:['Bordô','Preto']});
@@ -607,8 +613,8 @@ class Component extends DCLogic {
     const nImg = prod ? prod.images.length : 0;
     const imgIdx = nImg ? Math.min(Math.max(s.img || 0, 0), nImg - 1) : 0;
     const gallery = prod ? prod.images.map((_,i) => ({ n:i+1, thumb:prod.thumbs[i],
-      outline: imgIdx===i ? '#B08A4D' : 'transparent', select: ()=>this.setState({img:i}) })) : [];
-    const colorOpts = prod && prod.colors ? prod.colors.map(c => ({ name:c, hex:this.COLORS[c] || '#DCD3C4', outline: s.color===c ? '#B08A4D' : 'transparent', select:()=>this.setState({color:c}) })) : [];
+      outline: imgIdx===i ? '#B08A4D' : 'transparent', select: ()=>this.setState(prod.colorPhotos && prod.colors[i] ? {img:i, color:prod.colors[i]} : {img:i}) })) : [];
+    const colorOpts = prod && prod.colors ? prod.colors.map((c,ci) => ({ name:c, hex:this.COLORS[c] || '#DCD3C4', outline: s.color===c ? '#B08A4D' : 'transparent', select:()=>this.setState(prod.colorPhotos && ci < nImg ? {color:c, img:ci} : {color:c}) })) : [];
     const sizeOpts = prod ? prod.sizes.map(z => { const on = s.size===z; return { name:z, border:on?'#1f1b16':'#DCD3C4', bg:on?'#1f1b16':'#fff', color:on?'#fff':'#1f1b16', select:()=>this.setState({size:z, sizeError:false}) }; }) : [];
     const related = prod ? withDelay(all.filter(p=>p.cat===prod.cat && p.id!==prod.id).concat(all.filter(p=>p.cat!==prod.cat)).slice(0,4)) : [];
     const cartItems = s.cart.map((it,i) => { const p = all.find(x=>x.id===it.id); return { ...it, name:p.name, ref:p.ref, thumb:p.thumb, tint:p.tint, variant:`Ref. ${p.ref} · ${it.color ? it.color + ' · ' : ''}Tam. ${it.size}`, lineFmt:this.fmt(p.price*it.qty), price:p.price,
@@ -647,8 +653,8 @@ class Component extends DCLogic {
       prod, activeTint: prod ? prod.tint : '',
       activeImg: prod ? prod.images[imgIdx] : '', activeIndexLabel: imgIdx + 1,
       gallery, hasGallery: nImg > 1,
-      prevImg: ()=>this.setState(st=>({ img: (st.img - 1 + nImg) % nImg })),
-      nextImg: ()=>this.setState(st=>({ img: (st.img + 1) % nImg })),
+      prevImg: ()=>this.setState(st=>{ const im = ((st.img||0) - 1 + nImg) % nImg; return prod && prod.colorPhotos && prod.colors[im] ? { img:im, color:prod.colors[im] } : { img:im }; }),
+      nextImg: ()=>this.setState(st=>{ const im = ((st.img||0) + 1) % nImg; return prod && prod.colorPhotos && prod.colors[im] ? { img:im, color:prod.colors[im] } : { img:im }; }),
       noop: e => { e && e.preventDefault && e.preventDefault(); },
       hrefHome: this.href({view:'home'}), hrefTodas: this.href({view:'cat',cat:'Todas'}),
       hrefProdCat: prod ? this.href({view:'cat',cat:prod.cat}) : '',
