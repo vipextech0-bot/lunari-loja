@@ -454,19 +454,15 @@ class Component extends DCLogic {
     // Blusas
     add('Blusa 01','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44),colors:['Preto','Off-white','Verde-oliva']});
     add('Blusa 02','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40),colors:['Bege','Marrom','Marinho']});
-    add('Blusa 03','Blusas','Blusa Canelada',65,U,'Blusa canelada, leve e fácil de combinar.',{fit:un(36,40),colors:['Rosa','Off-white','Preto']});
-    add('Blusa 04','Blusas','Blusa Malha Premium Rendada',89.9,U,'Blusa em malha premium com detalhes em renda.',{fit:un(36,42),colors:['Preto']});
     add('Blusa 05','Blusas','Regata Poliamida',60,U,'Regata em poliamida, toque macio e modelagem ajustada.',{fit:un(36,40),colors:['Marrom','Marinho','Off-white']});
     add('Blusa 06','Blusas','Body Poliamida',120,U,'Body em poliamida, toque macio e ótima elasticidade.',{fit:un(36,44),colors:['Verde-oliva','Marrom','Marinho','Off-white']});
     add('Blusa 07','Blusas','Blusa Malha Canelada',75,U,'Blusa em malha canelada, básica e confortável.',{fit:un(36,40),colors:['Preto','Marrom','Rosa','Marinho']});
     add('Blusa 08','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Marrom','Lilás']});
     add('Blusa 09','Blusas','Blusa Manga Muscle',65,U,'Blusa com manga muscle, modelagem moderna.',{fit:un(),colors:['Verde-militar','Preto']});
     add('Blusa 10','Blusas','Blusa Manga Morcego Tule',99.9,U,'Blusa em tule com manga morcego, leve e elegante.',{fit:un(),colors:['Estampado marsala','Estampado azul']});
-    add('Blusa 11','Blusas','Blusa Malha Premium',60,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Listrado bordô']});
     add('Blusa 12','Blusas','Blusa Moletinho Premium',79.9,U,'Blusa em moletinho premium, confortável e quentinha.',{fit:un(),colors:['Cinza-taupe','Terracota']});
     add('Blusa 13','Blusas','Body Renda Premium',139.9,U,'Body em renda premium com gola alta e manga longa. Delicado e sofisticado.',{fit:un(),colors:['Verde-oliva','Preto'],photos:['Blusa 14']});
     add('Blusa 15','Blusas','Blusa Malha Premium',65,P,'Blusa em malha premium, macia e versátil.',{fit:'Tamanho P',colors:['Off-white poá']});
-    add('Blusa 16','Blusas','Blusa Malha Premium',75,U,'Blusa em malha premium, macia e versátil.',{fit:un(),colors:['Listrado marinho']});
     add('Blusa 17','Blusas','Blusa Tricô Baly',79.9,PM,'Blusa em tricô baly, textura macia e caimento leve.',{fit:'Tamanhos P e M',colors:['Off-white']});
     add('Blusa 18','Blusas','Blusa Malha Premium',65,MG,'Blusa em malha premium, macia e versátil.',{fit:'Tamanhos M e G',colors:['Marinho','Off-white','Bordô']});
 
@@ -483,7 +479,7 @@ class Component extends DCLogic {
     // T-shirts: preço único, tamanho único
     const TCOR = {1:['Bordô poá'],2:['Marrom','Off-white'],3:['Marrom'],6:['Preto'],7:['Listrado rosa'],25:['Marrom']};
     const TFOTO = {2:['T-shirt 17'],9:['T-shirt 14']};  // mesma estampa fotografada duas vezes
-    const TPULA = new Set([14,17]);
+    const TPULA = new Set([1,14,17]);  // 01 removida a pedido; 14 e 17 viraram fotos de outras
     for (let i = 1; i <= 29; i++) { if (TPULA.has(i)) continue; const n = String(i).padStart(2,'0'); add(`T-shirt ${n}`,'T-shirts',`T-shirt ${n}`,64.9,U,'T-shirt em malha macia, modelagem confortável para o dia a dia. Preço único.',{fit:un(),colors:TCOR[i] || ['Off-white'],photos:TFOTO[i]}); }
 
     // Calças
