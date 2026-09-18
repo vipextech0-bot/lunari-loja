@@ -54,6 +54,10 @@ a.card{color:inherit;text-decoration:none;display:block}
 .pthumbs::-webkit-scrollbar{display:none}
 .pthumbs button{flex:none;width:62px;aspect-ratio:3/4;padding:0;border:0;background:#F1ECE3;overflow:hidden;outline-offset:2px;outline-width:1px;outline-style:solid}
 .pthumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.wa{position:fixed;right:18px;bottom:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(31,27,22,.3);animation:waIn .45s .6s cubic-bezier(.2,.8,.3,1.2) both}
+.wa:hover{transform:scale(1.07);box-shadow:0 10px 26px rgba(31,27,22,.36)}
+.wa svg{width:31px;height:31px;display:block}
+@keyframes waIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
 .card .ph{aspect-ratio:3/4;position:relative;overflow:hidden;background:#F1ECE3;transition:transform .3s ease,box-shadow .3s ease}
 .card:hover .ph{transform:translateY(-3px);box-shadow:0 12px 28px rgba(31,27,22,.08)}
 .card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -322,6 +326,10 @@ a.card{color:inherit;text-decoration:none;display:block}
 </footer>
 
 </div>
+
+<a class="wa" href="{{ waFloatLink }}" target="_blank" rel="noopener" aria-label="Falar com a Lunari no WhatsApp" title="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2 0-.2-.2-.2-.4-.3z"></path></svg>
+</a>
 
 <sc-if value="{{ cartOpen }}" hint-placeholder-val="{{ false }}">
   <div style="position:fixed;inset:0;z-index:50;display:flex;justify-content:flex-end">
@@ -654,6 +662,7 @@ class Component extends DCLogic {
       closeCartGoAll: ()=>{ this.setState({cartOpen:false}); this.nav({view:'cat',cat:'Todas'}); },
       cartItems, cartEmpty: cartItems.length===0, cartHasItems: cartItems.length>0, totalFmt: this.fmt(total),
       checkoutLink: `https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, waLink: `https://wa.me/${wa}`,
+      waFloatLink: `https://wa.me/${wa}?text=` + encodeURIComponent('Olá, Lunari! Vim pelo site e gostaria de mais informações.'),
       toast: s.toast,
     };
   }
